@@ -28,6 +28,7 @@
 						glm
 						assimp
 						imgui
+						imgui.lib
 						stb
 					];
 
@@ -43,7 +44,7 @@
 							-I${pkgs.imgui}/include \
 							-I${pkgs.imgui}/include/imgui \
 							-I${pkgs.stb}/include/stb \
-							$(pkg-config --cflags --libs imgui 2>/dev/null || true) \
+							-L${pkgs.imgui.lib}/lib -limgui \
 							-lGL \
 							-o physics-engine
 					'';
