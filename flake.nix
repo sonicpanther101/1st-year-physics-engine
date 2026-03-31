@@ -42,7 +42,6 @@
 							-D_CRT_SECURE_NO_WARNINGS \
 							$(pkg-config --cflags --libs glfw3 glew assimp) \
 							-I${pkgs.imgui}/include \
-							-I${pkgs.imgui}/include/imgui \
 							-I${pkgs.stb}/include/stb \
 							-L${pkgs.imgui.lib}/lib -limgui \
 							-lGL \
